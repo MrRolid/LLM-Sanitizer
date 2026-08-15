@@ -953,6 +953,7 @@ a { color:var(--acc) }
   <p>CLI: <code>php llm-sanitizer.php --profile=<?= h($profile) ?> &lt; in.txt &gt; out.txt</code>
      &middot; <code>--report</code> &middot; <code>--no-tidy</code> &middot; <code>--help</code></p>
   <p>LLM Sanitizer v<?= h(LlmSanitizer::VERSION) ?>, MIT License, (c) 2026 Rolid spol. s r.o.</p>
+  <p><a href=https://github.com/MrRolid/LLM-Sanitizer> Github </a></p>
 </footer>
 </div>
 <script>
