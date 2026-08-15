@@ -1,0 +1,57 @@
+LLM Sanitizer — test fixture v1.0
+MIT, (c) 2026 Rolid spol. s r.o.
+
+== 1. INVISIBLE CONTROL CHARACTERS ==
+Zero width space insidethis word.
+ZWNJ betweenletters, ZWJ betweenletters.
+Word joiner forbidsa break right here.
+Byte order mark in the middle of a line.
+Soft hyphen inside a long unbreakable word.
+Bidi override: reversed run and an isolate inside the sentence.
+Invisible times 5x and a braille blank [].
+Hangul filler [] looks like a space but counts as a letter.
+
+== 2. SPACES ==
+Non breaking space between words, price 10 000 EUR.
+En quad[ ] em space[ ] thin space[ ] hair space[ ] medium math[ ].
+Line separator U+2028 here:
+the text continues.
+
+== 3. TYPOGRAPHY ==
+An em dash — in the middle of a sentence, an en dash – as well.
+Year range 2010–2020 and an e‑mail with a non-breaking hyphen.
+“Curly double quotes”, ‘curly singles’, „low nine“, don´t and don’t.
+Ellipsis… two dot leader‥ and the glyphs ‼ ⁇ ⁈ ⁉
+• first bullet
+• second bullet
+Number № 42, 5 × 3 ≤ 20 → OK, 1⁄2 as a fraction, c⁄o for care of.
+Ligatures: office, flag, different, efficient, affluent, state and star.
+
+== 4. LOOKALIKE CHARACTERS ==
+Homoglyphs: Rolid, Microsoft, Apple, PAYPAL.
+Genuine Cyrillic must survive: Привет мир.
+Genuine Greek must survive: Καλημέρα κόσμε.
+Math alphanumerics: Aad bold, Aa italic, Aa double struck, Aa monospace, 01 digits.
+Letterlike: H e l C N Z, Kelvin sign K next to plain K, Angstrom Å.
+Fullwidth: Ｈｅｌｌｏ！ and ０１２３.
+Decomposed diacritics: café nãive résumé (identical on screen to composed forms).
+
+== 5. STEGANOGRAPHIC PAYLOAD ==
+Variation selectors after a letter: A (nothing visible in any editor)
+Tag characters inside a sentence: and the text carries on.
+Zero width binary: at the end of this clause.
+
+== 6. MULTILINGUAL SECTIONS ==
+[EN] The quick brown fox — with “curly quotes” and a softhyphen.
+[DE] Große Straße – „Deutsche Anführungszeichen“ und ein geschütztes Leerzeichen.
+[ES] ¿Cómo estás? ¡Muy bien! — con comillas «angulares» y año 2010–2020.
+[CS] Příliš žluťoučký kůň úpěl ďábelské ódy — v lese.
+[JA] 葉葛󠄀の葉　これはＴｅｓｔです。三点リーダ…とダッシュ―、波ダッシュ〜。
+[JA] 不可視文字と隣接する例。絵文字: ❤️ 😀 👨‍👩‍👧
+
+== 7. WHITESPACE ==
+Two spaces between words and a space before the period.
+A line with trailing spaces
+
+Three blank lines above this one.
+End of fixture.
