@@ -99,6 +99,15 @@ green list scheme. Those are encoded in the choice of tokens, not in the
 characters, and survive any amount of character normalisation. The only thing
 that removes them is rewriting the text.
 
+## The other direction
+
+This project only removes carriers. If you need to *add* them, its companion
+does the inverse: [Text-Watermarker](https://github.com/MrRolid/Text-Watermarker)
+hides an arbitrary string inside cover text using the same three encodings this
+tool decodes, so a round trip is exact.
+
+Encode with one, decode and strip with the other:
+
 ## License
 
 MIT. See LICENSE.
